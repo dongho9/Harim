@@ -1,0 +1,475 @@
+@charset "utf-8";
+
+/* mobile.css */
+/* 미디어쿼리 0~767px */
+
+/* @media screen and (max-width:767px)
+{ */
+body{
+    overflow-x: hidden;
+}
+    header{
+        height: 60px;
+    }
+    header h1{
+        width: 130px;
+        margin: 0px auto;
+        padding-top: 5px;
+    }
+    header h1 img{
+        width: 100%;
+    }
+    .total_btn, .cart_btn{
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        padding: 12px;
+        top: 6px;
+    }
+    .total_btn{
+        left: 10px;
+    }
+    .cart_btn{
+        right: 10px;
+    }
+
+    /* h_top서식 */
+    .lnb{
+        position: fixed;
+        top: 400px;
+        z-index: 15999;
+        width: 100%;
+        left: -100%;
+        transition: 0.5s;
+    }
+    .lnb > ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .lnb > ul > li{
+        width: 44%;
+        margin: 0px 2px 4px 2px;
+        text-align: center;
+        background-color: #686868;
+    }
+    .lnb > ul > li > a{
+        color: #fff;        display: block;
+        line-height: 280%;
+        display: block;
+    }
+
+
+    /* h_bottom서식 */
+    .gnb{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        background-color: rgba(0,0,0,.8);
+        z-index: 100;
+        left: -100%;
+        transition: 0.5s;
+    }
+    .gnb > ul{
+        padding: 100px 1.2%;
+    }
+    .gnb > ul > li{
+        border-bottom: 1px solid #fff;
+        text-indent: 20px;
+        line-height: 280%;
+    }
+    .gnb > ul > li > a{
+        color: #fff;
+        display: block;
+        line-height: 280%;
+    }
+    .gnb > ul > li > a > i.fa-angle-down{
+        float: right;
+        font-size: 1.1rem;
+        padding: 9px 8px;
+    }
+    .sub{
+        display: none;
+    }
+    .c_btn{
+        color: #fff;
+        font-size: 2rem;
+        position: absolute;
+        right: 4%;
+        top: 1%;
+        padding: 6px;
+        z-index: 120;
+    }
+
+    /* 검색폼 서식 */
+    fieldset{
+        position: fixed;
+        width: 100%;
+        top: 6%;
+        z-index: 110;
+        text-align: center;
+        left: -100%;
+        transition: 0.5s;
+    }
+    fieldset span{
+        display: none;
+    }
+    fieldset #search{
+        width: 58.97%;
+        height: 30px;
+        border-radius: 26px;
+        text-align: center;
+        border: none;
+        outline: none;
+    }
+    fieldset label.fa-search{
+        font-size: 1.3rem;
+        transform: translate(-36px, 4px);
+    }
+    #toggle:checked + header > .h_top > .lnb{
+        left: 0%;
+    }
+    #toggle:checked + header > .h_top > fieldset{
+        left: 0%;
+    }
+    #toggle:checked + header > .h_bottom > .gnb{
+        left: 0%;
+    }
+    
+
+    /* 메인서식 */
+    .visual{
+        overflow: hidden;
+    }
+    section:not(.visual){
+        padding: 40px 0px;
+    }
+   section > h2{
+        display: none;
+    }
+    .visual_slide{
+        position: relative;
+        height: 60vh;
+    }
+    .swiper-slide{
+        width: 100%;
+        overflow: hidden;
+    }
+    .visual_slide img{
+        width: 390%;
+        transform: translateX(-620px);
+    }
+    .swiper-pagination{
+        position: absolute;
+    }
+
+
+    .free{
+        background-color: #E32929;
+    }
+    .free article > h2{
+        display: none;
+    }
+    .free article{
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .free img{
+        width: 90%;
+        margin: 30px auto;
+    }
+    .free_right img{
+        width: 60px;
+        margin: 0px;
+        padding-bottom: 15px;
+    }
+    .free_right{
+        color: #fff;
+    }
+    .free_right > h3{
+        font-size: 1.6rem;
+        font-weight: 200;
+        /* padding-bottom: 16px; */
+    }
+    .free_right p{
+        font-size: 1rem;
+        line-height: 24px;
+        padding: 12px 0px 30px 0px;
+    }
+
+
+    .shop{
+        overflow: hidden;
+    }
+    .shop > h2 > img{
+        width: 30px;
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+    .shop > h2{
+        display: block;
+        text-align: center;
+        font-weight: 200;
+        font-size: 1.6rem;
+        padding-bottom: 40px;
+    }
+
+    /* 상품목록서식 */
+    .product{        
+        padding-top: 60px;
+        width: 160%;
+        display: flex;
+    }
+    .product > li{
+        width: 80%;
+        padding: 1%;
+        box-sizing: border-box;
+    }
+    .product > li img{
+        width: 140px;
+        float: left;
+    }
+    .inf{
+        width: 50%;
+        padding-top: 10px;
+        font-size: 1.2rem;
+        float: right;
+    }
+    .inf > h3{
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    .inf p{
+        line-height: 135%;
+    }
+    .inf > .price{
+        padding-top: 30px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #f00;
+        display: inline-block;
+    }
+    .inf > p:last-of-type{
+        padding: 20px 0px 0px 0px;
+    }
+
+    /* 4. 하림펫 스토리 서식 */
+    
+    .story{
+        background-color: #f0f0f0;
+    }
+    .story h2{
+        display: none;
+    }
+    .story > article{
+        text-align: center;
+    }
+    .story_left > h3 {
+        font-size: 1.6rem;
+        font-weight: 200;
+    }
+    .story_left{
+        margin-bottom: 50px;
+    }
+    .story img{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .story_left img{
+        width: 40px;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+    .story_left p{
+        font-size: 1rem;
+        line-height: 24px;
+        padding: 12px 0px 30px 0px;
+    }
+
+
+    /* 인스타서식 */
+    section.insta{
+        padding-bottom: 20px;
+    }
+    .insta > h2 > img{
+        vertical-align: middle;
+    }
+    .insta > h2{
+        display: block;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.4rem;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .id_name{
+        font-size: 0.75rem;
+        display: block;
+        line-height: 180%;
+    }
+    .gallery{
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 160px);
+    }
+    .gallery > li{
+        overflow: hidden;
+        /* li태그를 벗어난 부분은 숨기기 */
+    }
+    .gallery img{
+        width: 100%;
+    }
+    .gallery > li:nth-child(6) ~ li{
+        display: none;
+    }
+    /* 6번째 리스트부터 모두 숨김 */
+    .gallery > li > a{
+
+    }
+
+
+
+    /* 작은 mobile영역에서 적용되는 서식 */
+    @media screen and (max-width:414px){
+        .product > li img{
+            width: 140px;
+        }
+    }
+    @media screen and (max-width:390px){
+        .product > li img{
+            width: 140px;
+        }
+        .inf p{
+            line-height: 25px;
+        }
+    }
+    @media screen and (max-width:360px){
+        .product > li img{
+            width: 140px;
+        }
+    }
+    @media screen and (max-width:320px){
+        .product > li img{
+            width: 100px;
+        }
+        .inf h3{
+            font-size: 1rem;
+        }
+        .inf p{
+            line-height: 13px;
+            font-size: 0.9rem;
+        }
+        .inf p.price{
+            font-size: 0.9rem;
+        }
+    }
+    /* 푸터서식 */
+    footer{
+        color: #fff;
+        
+    }    
+    .f_nav{
+        order: 2;
+        background-color: #1c1c1c;
+        width: 100%;
+        text-align: center;
+        line-height: 280%;
+    }
+    .f_nav a{
+        color: #fff;
+        padding: 6px 10px;
+    }
+    .f_top{
+        display: flex;
+        height: 80px;
+        background-color: #989898;
+        flex-wrap: wrap;
+        /* flex-direction: column-reverse; */
+    }
+
+    .f_top > dl{
+        width: 100%;
+        order: 1;
+        line-height: 37px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.8rem;
+    }
+    .f_top > dl a{
+        color: #fff;
+    }
+    .f_top > dl dd:first-of-type{
+        width: 60%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .f_top  span{
+        padding-left: 10px;
+    }
+    /* flex속성을 사용하여 자식요소의 순서를 변경하는 방법
+    1. 부모에 flex-direction:column-reverse; 준다
+    2. 자식요소에 order:숫자(낮은숫자가 먼저배치됨) */
+    .f_bottom{
+
+    }
+    .f_bottom > ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .f_bottom > ul > li{
+        text-align: center;
+    }
+    .f_bottom > ul > li:first-child{
+        order: 3;
+        width: 50%;
+    }
+    .f_bottom > ul > li:nth-child(2){
+        order: 4;
+        width: 50%;
+    }
+    .f_bottom > ul > li:nth-child(3){
+        order: 2;
+        width: 100%;
+        line-height: 50px;
+    }
+    .f_bottom > ul > li:nth-child(3) i{
+        font-size: 1.4rem;
+        color: #fff;
+        padding: 5px;
+    }
+    .f_bottom > ul > li:last-child{
+        order: 1;
+        width: 100%;
+        line-height: 40px;
+    }
+    select{
+        border-radius: 5px;
+        width: 50%;
+        height: 30px;
+    }
+    .f_bottom dl{
+        padding: 12px 4%;
+        line-height: 200%;
+        text-align: left;
+    }
+    .f_bottom dl > dt{
+        font-size: 0.9rem;
+    }
+    .info{
+        color: #fff;
+    }
+    .tel{
+        font-size: 1.6rem;
+        color: #fff;
+    }
+    .tel02{
+        color: #fff;
+    }
+/* } */

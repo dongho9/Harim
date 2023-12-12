@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+/* pc해상도일 때 적용되는 서식 */
+@media screen and (min-width:1025px){
+
+   header{
+      height: 170px;
+      width: 100%;
+      position: relative;
+      z-index: 10000000;
+   }  
+   .h_top > h1{
+      position: absolute;
+      left: 20px;
+      top: 40px;
+   }
+   .h_top a > img{
+      width: 210px;
+   }
+   .total_btn, .cart_btn, .c_btn{
+      display: none;
+   }
+   .h_top{
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+   }
+   .h_bottom{
+      width: 100%;
+      height: 44.8px;
+      overflow: hidden;
+      background-color: rgba(255,255,255,.8);
+      position: absolute;
+      top: 145px;
+      transition: 0.5s;
+   }
+   .h_bottom:hover{
+      height: 300px;
+   }
+   /* lnb서식 */
+   .lnb{
+      position: absolute;
+      right: 0px;
+      top: 30px;
+      left: auto;    
+      width: 300px;
+   }
+   .h_top > .lnb > ul {
+      flex-wrap: nowrap;
+  }
+   .h_top > .lnb > ul > li{
+      background: none;
+   }
+   fieldset{
+      left: auto;
+      width: 500px;
+      position: absolute;
+      right: 0px;
+      top: 90px;
+      text-align: right;
+   }
+   .gnb{
+      width: 100%;
+      background-color: #4B4B4B;
+      height: 44.8px;
+      position: absolute;
+      left: auto;
+      right: 0px;
+   }
+   .gnb > ul > li > a:hover .sub{
+
+   }
+   .gnb > ul{
+      display: flex;
+      justify-content: end;
+      padding: 0;
+      width: 1200px;
+      margin: 0 auto;
+   }
+   .gnb > ul > li:last-child{
+      padding: 0;
+   }
+   .gnb > ul > li{
+      border: none;
+      padding: 0px 3.8%;
+      position: relative;
+      text-indent: 0px;
+   }
+   .gnb > ul > li > a{
+      line-height: 240%;
+      font-size: 1rem;
+   }
+   .sub > li > a:hover{
+      text-decoration: underline;
+
+   }
+   /* .gnb > ul > li > a::after{
+      width: 1px;
+      height: 14px;
+      background-color: #fff;
+      content: "";
+      display: block;
+      position: relative;
+      top: -25px;
+   } 
+   .gnb > ul > li:first-child a::after{
+      display: none;
+   } */
+   .gnb > ul > li:first-child{
+     padding: 0px 7%;
+   }
+   i.fa-angle-down{
+      display: none;
+   }
+   /* 서브메뉴서식 */
+   .sub{
+      position: absolute;
+      left: 0px;
+      top: 44.8px;
+      width: 100%;
+      height: 255px;
+      text-align: center;
+      display: block;
+   }
+   
+   .sub > li > a{
+      color: #000;
+      font-size: 0.9rem;
+   }
+   
+   .s_story > h2{
+    display: block;
+    /* background-color: #32a18f;
+    text-align: center; */
+   }
+   .s_story > h2 > img{
+    width: 100%;
+   }
+   section:not(.visual) {
+   padding: 0px;
+    }
+    .s_story nav ul{
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 2px solid #ccc;
+    }
+    .s_story nav > ul > li{
+        
+    }
+    .s_story nav > ul > li > a{
+        color: #333;
+        font-size: 20px;
+        line-height: 60px;
+    }
+    .s_story nav > ul > li > a:focus{
+        color: #9d6849;
+    }
+    .s_story nav > ul > li > a:focus::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #9d6849;
+        transform: translateY(2px);
+    }
+    .our_story{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .our_credo{
+        width: 100%;
+        margin: 0 auto;        
+        background-color: #da291c;
+        text-align: center;
+        padding: 70px 0px;
+    }
+
+
+   /* 푸터서식 */
+   .f_bottom br{
+      display: none;
+   }
+   footer{
+      height: 215px;
+      background-color: #989898;
+   }
+   .f_top{
+      flex-wrap: nowrap;
+      flex-direction: row-reverse;
+      height: 50px;
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+   }
+   .f_nav{
+      line-height: 50px;
+      background: none;
+      position: absolute;
+      width: 20%;
+      left: 0px;
+      right: auto;
+   }
+   .f_nav a{
+      color: #000;
+   }
+   .f_top > dl{
+      line-height: 50px;
+      width: 50%;
+      position: absolute;
+      right: 0px;
+   }
+   .f_top > dl dd:first-of-type {
+      
+   }
+   .f_bottom{
+      background-color: #3a3a3a;
+   }
+   .f_bottom > ul{
+      display: flex;
+      flex-wrap: nowrap;
+      width: 1200px;
+      margin: 0 auto;
+      position: relative;
+  }
+.f_bottom > ul > li:first-child{
+   order: 1;
+   width: 150%;
+}
+.f_bottom > ul > li:nth-child(2){
+   order: 2;
+   width: 150%;
+}
+.f_bottom > ul > li:nth-child(3){
+   order: 4;
+}
+.f_bottom > ul > li:last-child{
+   order: 3;
+}
+.f_bottom li:nth-child(3) a{
+   top: 50px;
+   right: 40px;
+}
+.f_bottom select{
+   width: 200px;
+   right: 40px;
+   top: 20px;
+}
+.f_bottom select, .f_bottom li:nth-child(3) a{
+   position: absolute;
+}
+.f_bottom li:nth-child(3) a:first-child{
+   transform: translateX(-100px);
+}
+.f_bottom li:nth-child(3) a:nth-child(2){
+   transform: translateX(-50px);
+}
+.f_bottom > ul > li:last-child {
+   width: 0%;
+}
+address{
+   width: 1200px;
+   margin: 0 auto;
+}
+}
+/* 코드접기 단축키
+: ctrl + shift + [(한줄코드, 전체 접기)
+  ctrl + shift + ](한줄코드, 전체 펼치기)
+ */
